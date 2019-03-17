@@ -14,26 +14,25 @@ GST_Percentage = (GST_Amount * 100)/ original_cost
   */
 
 public class GSTCal {
-	
-	public GSTCal(int orignal_price, int net_price)
-	{
-		int gst_amount=net_price-orignal_price;
-		System.out.println("GST amount is :"+gst_amount);
-		int gst_percantage=(gst_amount*100)/orignal_price;
-		System.out.println("GST is "+gst_percantage+" %");
-		
+
+	public GSTCal(int orignal_price, int net_price) {
+		int gst_amount = net_price - orignal_price;
+		System.out.println("GST amount is :" + gst_amount);
+		int gst_percantage = (gst_amount * 100) / orignal_price;
+		System.out.println("GST is " + gst_percantage + " %");
+
 	}
-	   
-	    public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the orignal price");
-        int orignal_price=sc.nextInt();
-        System.out.println("Enter the net price");
-        int net_price=sc.nextInt();
-        
-        GSTCal gs=new GSTCal(orignal_price, net_price);
-        System.out.println(gs.getClass().getName());
-        sc.close();
-  	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the orignal price");
+		int orignal_price = sc.nextInt();
+		System.out.println("Enter the net price");
+		int net_price = sc.nextInt();
+
+		GSTCal gs = new GSTCal(orignal_price, net_price);
+		System.out.println(gs.getClass().getName());
+		sc.close();
+	}
 
 }
